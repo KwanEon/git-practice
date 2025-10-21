@@ -13,4 +13,8 @@ public class User {
     private Long id;
 
     private String name;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "team_id")
+    private Team team;
 }
